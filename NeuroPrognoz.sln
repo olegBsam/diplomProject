@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuroPrognoz", "NeuroPrognoz\NeuroPrognoz.csproj", "{061DA9F5-6C45-4F5F-AB63-17B4006B8885}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{061DA9F5-6C45-4F5F-AB63-17B4006B8885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061DA9F5-6C45-4F5F-AB63-17B4006B8885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061DA9F5-6C45-4F5F-AB63-17B4006B8885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061DA9F5-6C45-4F5F-AB63-17B4006B8885}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56327010-454F-4038-9F90-A12D2DCAD24A}
+	EndGlobalSection
+EndGlobal
