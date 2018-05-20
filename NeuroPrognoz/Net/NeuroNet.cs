@@ -34,7 +34,7 @@ namespace Net
                 {
                     var set = learningSets.ElementAt(i);
                     double netOutput = CalculateNetOutput(set.Value);
-                    hiddenLayer.Correction(netOutput, set.Key);
+                    hiddenLayer.Correction(netOutput, set.Key, set.Value);
                     if (double.IsNaN(netOutput))
                     {
                         int a = 0;

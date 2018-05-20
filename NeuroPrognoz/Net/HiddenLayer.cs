@@ -40,11 +40,11 @@ namespace Net
             }
         }
 
-        public void Correction(double y, double d)
+        public void Correction(double y, double d, double[] x)
         {
             for (int i = 0; i < neuronsCount; i++)
             {
-                neurons[i].Correction(y, d, lambda);
+                neurons[i].Correction(y, d, lambda, x[i]);
             }
         }
 

@@ -32,23 +32,23 @@ namespace Net
 
         protected virtual double ActivationFunctionCalculate(double input)
         {
-            /*
+            
             double result = (input - center) / (2.0 * Math.Pow(radius, 2));
             result = Math.Pow(1.0 - result, 2) * (15.0 / 16.0);
             if (double.IsNaN(result))
             {
                 throw new Exception();
             }
-            */
-            double result = Math.Exp(-Math.Pow(input - center, 2) / (2 * Math.Pow(radius, 2)));
+            
+         //   double result = Math.Exp(-Math.Pow(input - center, 2) / (2 * Math.Pow(radius, 2)));
             return result;
         }
 
-        public void Correction(double y, double d, double lambda)
+        public void Correction(double y, double d, double lambda, double x)
         {
-            double w = weight - lambda * WeightDerivative(y, d);
-            double c = center - lambda * CenterDerivative(y, d);
-            double r = radius - lambda * RadiusDerivative(y, d);
+            double w = weight - lambda * WeightDerivative(y, d, x);
+            double c = center - lambda * CenterDerivative(y, d, x);
+            double r = radius - lambda * RadiusDerivative(y, d, x);
 
             weight = w;
             center = c;
@@ -59,12 +59,12 @@ namespace Net
             }
         }
 
-        private double WeightDerivative(double y, double d)
+        private double WeightDerivative(double y, double d, double x)
         {
             double result = (y - d) * ActivationFunctionCalculate(x) * (ActivationFunctionCalculate(x) * weight - d);
             return result;
         }
-        private double CenterDerivative(double x, double d)
+        private double CenterDerivative(double y, double d, double x)
         {
             double result = 15.0/16.0 * weight * Math.Pow(1 - ((x - center)/(2 * Math.Pow(radius, 2))), 2);
             result *= 15.0 / 16.0 * weight * (1 - ((x - center) / (2 * Math.Pow(radius, 2)))) * 1 / Math.Pow(radius, 2);
@@ -75,7 +75,7 @@ namespace Net
             */
             return result;
         }
-        private double RadiusDerivative(double x, double d)
+        private double RadiusDerivative(double y, double d, double x)
         {
             double fr = 15.0 / 16.0 * weight * (1 - ((x - center) / (2 * Math.Pow(radius, 2))));
             double result = (fr * (1 - ((x - center) / (2 * Math.Pow(radius, 2))) - d)) * (fr * 2) * (-3 * (center - x) / 2) / Math.Pow(radius, 3);
