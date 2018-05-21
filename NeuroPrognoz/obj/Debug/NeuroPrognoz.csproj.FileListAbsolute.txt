@@ -17,3 +17,4 @@ C:\Users\olegb\Desktop\Диплом\NeuroPrognoz\NeuroPrognoz\obj\Debug\NeuroPro
 C:\Users\olegb\Desktop\Диплом\NeuroPrognoz\NeuroPrognoz\obj\Debug\NeuroPrognoz.csproj.CoreCompileInputs.cache
 C:\Users\olegb\Desktop\Диплом\NeuroPrognoz\NeuroPrognoz\obj\Debug\NeuroPrognoz.exe
 C:\Users\olegb\Desktop\Диплом\NeuroPrognoz\NeuroPrognoz\obj\Debug\NeuroPrognoz.pdb
+C:\Users\olegb\Desktop\Диплом\NeuroPrognoz\NeuroPrognoz\obj\Debug\NeuroPrognoz.csproj.ResolveComReference.cache
